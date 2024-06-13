@@ -16,7 +16,7 @@
 
 body {
   background-color: var(--dalmond);
-  min-width: 100svh;
+  min-height: 100svh;
   .container {
     max-width: 1440px;
     margin: 50px auto;
@@ -73,8 +73,10 @@ body {
         border: none;
         padding: 20px 30px;
         font-size: 22px;
+        font-weight: bold;
         border-radius: 30px;
         color: var(--brown);
+        text-wrap: nowrap;
         cursor: pointer;
         &:hover {
           background: var(--brown);
@@ -92,6 +94,9 @@ body {
       padding: 50px;
       h2 {
         text-transform: capitalize;
+      }
+      p{
+        text-align: justify;
       }
     }
     .prices {
@@ -140,5 +145,35 @@ body {
         }
       }
     }
+  }
+}
+
+
+@media screen and (max-width:768px){
+  body{
+.container{
+  margin: auto;
+  header{
+    nav{
+      display: none;
+    }
+  }
+  .banner{
+    button.cta{
+      font-size: 16px;
+    }
+  }
+  .aboutUs{
+    padding: 30px 5%;
+  }
+  .prices{
+    padding: 30px 5%;
+    .cards{
+      .card{
+        width: 95%;height: 230px;
+      }
+    }
+  }
+}
   }
 }

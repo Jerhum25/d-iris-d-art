@@ -16,7 +16,7 @@
 
 body {
   background-color: var(--dalmond);
-  min-width: 100svh;
+  min-height: 100svh;
 }
 body .container {
   max-width: 1440px;
@@ -70,8 +70,10 @@ body .container .banner button.cta {
   border: none;
   padding: 20px 30px;
   font-size: 22px;
+  font-weight: bold;
   border-radius: 30px;
   color: var(--brown);
+  text-wrap: nowrap;
   cursor: pointer;
 }
 body .container .banner button.cta:hover {
@@ -89,6 +91,9 @@ body .container .aboutUs {
 }
 body .container .aboutUs h2 {
   text-transform: capitalize;
+}
+body .container .aboutUs p {
+  text-align: justify;
 }
 body .container .prices {
   padding: 50px;
@@ -134,6 +139,28 @@ body .container .prices .cards .card ul li {
 body .container .prices .cards .card .price {
   font-size: 20px;
   font-weight: bold;
+}
+
+@media screen and (max-width: 768px) {
+  body .container {
+    margin: auto;
+  }
+  body .container header nav {
+    display: none;
+  }
+  body .container .banner button.cta {
+    font-size: 16px;
+  }
+  body .container .aboutUs {
+    padding: 30px 5%;
+  }
+  body .container .prices {
+    padding: 30px 5%;
+  }
+  body .container .prices .cards .card {
+    width: 95%;
+    height: 230px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
