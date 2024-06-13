@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/style.css" />
+    <script src="https://kit.fontawesome.com/279d0d4073.js" crossorigin="anonymous"></script>
     <title>D'Iris & d'Art</title>
   </head>
   <body>
@@ -47,11 +48,14 @@
           régulièrement à jour sur deux nouvelles techniques, grâce à des
           formations effectuées par des photographes agréés par des centres de
           formation, par l’évolution du numérique, C’est pour cela que nous
-          avons participé ensemble à la formation pour photographier les iris .</p>
-          <br /><br /><br />
+          avons participé ensemble à la formation pour photographier les iris .
+        </p>
+        <br /><br /><br />
 
-          <h3>La photographie de l’iris, qu'est ce que c'est ?</h3><br />
-          <p>Afin de diversifier notre offre, nous sommes donc parties nous former
+        <h3>La photographie de l’iris, qu'est ce que c'est ?</h3>
+        <br />
+        <p>
+          Afin de diversifier notre offre, nous sommes donc parties nous former
           en juin 2023 à la photographie d’iris.<br /><br />
 
           La séance se déroule en studio et consiste à photographier vos yeux
@@ -61,48 +65,96 @@
 
           Une retouche est ensuite réalisée. L’une des photographes prend le
           cliché et l’autre procède à une retouche. Elle est effectuée pour
-          sublimer la photo, tout en conservant les couleurs naturelles de
-          votre iris.<br /><br />
+          sublimer la photo, tout en conservant les couleurs naturelles de votre
+          iris.<br /><br />
 
-          Vient ensuite l'effet créatif pour faire de votre iris une œuvre
-          d’art : Vous seriez surpris de la vraie
-          couleur de vos yeux…!
+          Vient ensuite l'effet créatif pour faire de votre iris une œuvre d’art
+          : Vous seriez surpris de la vraie couleur de vos yeux…!
         </p>
       </section>
 
       <section class="prices" id="prices">
-        <h2>nos tarifs</h2><br/>
+        <h2>nos tarifs</h2>
+        <br />
         <div class="cards">
-            <div class="card">
-                <h3>1 iris solo</h3>
-                <ul class="description">
-                    <li>prise de vue 1 iris</li>
-                    <li>votre photo livrée retouchée en numérique HD</li>
-                </ul>
-                <p class="price">69€</p>
+          <div class="card">
+            <h3>1 iris solo</h3>
+            <ul class="description">
+              <li>prise de vue 1 iris</li>
+              <li>votre photo sublimée en montage artistique</li>
+              <li>votre fichier numérique en HD</li>
+            </ul>
+            <p class="price">69€</p>
+          </div>
+          <div class="card">
+            <h3>2 iris coulpe</h3>
+            <ul class="description">
+              <li>prise de vue 2 iris</li>
+              <li>votre photo sublimée en montage artistique</li>
+              <li>votre fichier numérique en HD</li>
+              <li>votre tirage en 30x40cm</li>
+              <li>support au choix</li>
+            </ul>
+            <p class="price">150€</p>
+          </div>
+          <div class="card">
+            <h3>4 iris famille</h3>
+            <ul class="description">
+              <li>prise de vue 4 iris</li>
+              <li>votre photo sublimée en montage artistique</li>
+              <li>votre fichier numérique en HD</li>
+              <li>votre tirage en 30x40cm</li>
+              <li>support au choix</li>
+            </ul>
+            <p class="price">250€</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="contacts">
+        <form>
+          <h2>contactez nous</h2>
+          <div class="names">
+            <div class="firstName">
+              <label for="firstName">Prénom <span>*</span></label
+              ><input type="text" name="first name" id="firstName" />
+              <p class="firstNameError error">Ce champ est requis</p>
             </div>
-            <div class="card">
-                <h3>2 iris coulpe</h3>
-                <ul class="description">
-                    <li>prise de vue 2 iris</li>
-                    <li>votre photo sublimée en montage artistique</li>
-                    <li>votre fichier numérique en HD</li>
-                    <li>votre tirage en 30x40cm</li>
-                    <li>support au choix</li>
-                </ul>
-                <p class="price">150€</p>
+            <div class="lastName">
+              <label for="lastName">Nom <span>*</span></label
+              ><input type="text" name="last name" id="lastName" />
+              <p class="lastNameError error">Ce champ est requis</p>
             </div>
-            <div class="card">
-                <h3>4 iris famille</h3>
-                <ul class="description">
-                    <li>prise de vue 4 iris</li>
-                    <li>votre photo sublimée en montage artistique</li>
-                    <li>votre fichier numérique en HD</li>
-                    <li>votre tirage en 30x40cm</li>
-                    <li>support au choix</li>
-                </ul>
-                <p class="price">250€</p>
-            </div>
+          </div>
+          <div class="email">
+            <label for="email">Adresse email <span>*</span></label
+            ><input type="email" name="email" id="email" />
+            <p class="emailError error">Ce champ est requis</p>
+          </div>
+          <div class="message">
+            <label for="message">Message <span>*</span></label
+            ><textarea name="message" id="message"></textarea>
+            <p class="messageError error">Ce champ est requis</p>
+          </div>
+          <button type="submit">envoyer</button>
+        </form>
+
+        <div class="links">
+          <div class="adresse">
+            <h2>nous trouver</h2><br/>
+            <a href="https://maps.app.goo.gl/L8R7SBPQiXqCwzKE8" target="_blank">
+              D'iris & D'art<br />3 rue de l'Eglise<br />25720 AVANNE-AVENEY
+            </a>
+            <br/><br/>
+            <p><i class="fa-regular fa-hand-pointer"></i>Cliquez sur l'adresse pour nous localiser</p>
+          </div>
+          <div class="socialNetworks">
+            <h2>suivez nous sur les réseaux</h2><br/>
+            <ul>
+              <li><a href="https://www.facebook.com/profile.php?id=61553070890176" target="_blank"><img src="./assets/images/facebook.png" alt="facebook link"></a></li>
+              <li><a href="https://www.instagram.com/diris_et_dart_besancon/" target="_blank"><img src="./assets/images/instagram.png" alt="instagram link"></a></li>
+            </ul>
+          </div>
         </div>
       </section>
     </div>
