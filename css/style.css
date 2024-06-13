@@ -73,7 +73,6 @@ body .container .banner button.cta {
   font-size: 22px;
   font-weight: bold;
   border-radius: 30px;
-  color: var(--brown);
   text-wrap: nowrap;
   cursor: pointer;
 }
@@ -83,6 +82,9 @@ body .container .banner button.cta:hover {
 }
 body .container .banner button.cta:active {
   background: var(--dalmond);
+  color: var(--brown);
+}
+body .container .banner button.cta a {
   color: var(--brown);
 }
 body .container .aboutUs {
@@ -240,10 +242,21 @@ body .container .contacts .links .socialNetworks ul {
   display: flex;
   gap: 30px;
 }
+body .container footer {
+  font-weight: bold;
+  text-align: center;
+  padding: 15px;
+}
 
 @media screen and (max-width: 768px) {
   body .container {
     margin: auto;
+  }
+  body .container header {
+    padding: 15px;
+  }
+  body .container header .logo h1 {
+    font-size: 35px;
   }
   body .container header nav {
     display: none;
@@ -260,6 +273,21 @@ body .container .contacts .links .socialNetworks ul {
   body .container .prices .cards .card {
     width: 100%;
     height: 230px;
+  }
+  body .container .contacts {
+    padding: 30px 2%;
+    flex-direction: column;
+  }
+  body .container .contacts form {
+    padding: 0;
+    width: 100%;
+  }
+  body .container .contacts form button {
+    width: fit-content;
+    align-self: center;
+  }
+  body .container .contacts .links {
+    padding: 30px 2%;
   }
 }
 
