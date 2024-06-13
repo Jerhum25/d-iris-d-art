@@ -29,12 +29,52 @@ body {
       padding: 30px;
       background: #776f64;
       color: #fff;
+      position: relative;
       .logo {
         img {
           display: none;
         }
         h1 {
           font-size: 45px;
+        }
+      }
+      .burger {
+        width: 30px;
+        height: 30px;
+        display: none;
+        align-items: center;
+        cursor: pointer;
+        .line {
+          width: 30px;
+          height: 3px;
+          background-color: var(--white);
+          &::before {
+            content: "";
+            width: 30px;
+            height: 3px;
+            position: absolute;
+            transform: translateY(-10px);
+            background: var(--white);
+            transition: 0.3s;
+          }
+          &::after {
+            content: "";
+            width: 30px;
+            height: 3px;
+            position: absolute;
+            transform: translateY(10px);
+            background: var(--white);
+            transition: 0.3s;
+          }
+        }
+        &.open .line {
+          width: 0;
+          &::before {
+            transform: rotate(45deg);
+          }
+          &::after {
+            transform: rotate(-45deg);
+          }
         }
       }
       nav {
@@ -86,7 +126,7 @@ body {
           background: var(--dalmond);
           color: var(--brown);
         }
-        a{
+        a {
           color: var(--brown);
         }
       }
@@ -120,7 +160,6 @@ body {
           height: 300px;
           display: flex;
           align-items: center;
-          // justify-content: space-between;
           flex-direction: column;
           background-color: var(--dalmond);
           color: var(--brown);
@@ -233,11 +272,11 @@ body {
           text-transform: capitalize;
         }
         .adresse {
-          a{
+          a {
             color: var(--black);
           }
-          p{
-            i{
+          p {
+            i {
               margin-right: 5px;
             }
           }
@@ -251,12 +290,12 @@ body {
           }
         }
       }
-      }
-        footer{
-          font-weight: bold;
-          text-align: center;
-          padding: 15px;
-        }
+    }
+    footer {
+      font-weight: bold;
+      text-align: center;
+      padding: 15px;
+    }
   }
 }
 
@@ -266,14 +305,39 @@ body {
       margin: auto;
       header {
         padding: 15px;
-        .logo{
-          h1{
+        .logo {
+          h1 {
             font-size: 35px;
-
           }
         }
+        .burger {
+          display: flex;
+          z-index: 10;
+        }
         nav {
+          // display: none;
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100svw;
+          height: 100svh;
+          background-color: var(--brown);
+          z-index: 5;
           display: none;
+          place-content: center;
+          ul {
+            flex-direction: column;
+            text-align: center;
+            li {
+              a {
+                font-size: 30px;
+              }
+            }
+          }
+          &.openMenu {
+            display: grid;
+          }
+  
         }
       }
       .banner {
@@ -293,17 +357,18 @@ body {
           }
         }
       }
-      .contacts{
+      .contacts {
         padding: 30px 2%;
         flex-direction: column;
-        form{
+        form {
           padding: 0;
           width: 100%;
-          button{
-            width: fit-content;align-self: center;
+          button {
+            width: fit-content;
+            align-self: center;
           }
         }
-        .links{
+        .links {
           padding: 30px 2%;
         }
       }
