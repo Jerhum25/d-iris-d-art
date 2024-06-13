@@ -11,10 +11,11 @@
   --white: #fff;
   --black:#000;
   --brown: #776F64;
+  --dalmond: #ffebcd;
 }
 
 body {
-  background-color: blanchedalmond;
+  background-color: var(--dalmond);
   min-width: 100svh;
 }
 body .container {
@@ -27,6 +28,8 @@ body .container header {
   justify-content: space-between;
   align-items: center;
   padding: 30px;
+  background: #776F64;
+  color: #fff;
 }
 body .container header .logo img {
   display: none;
@@ -40,9 +43,40 @@ body .container header nav ul {
 }
 body .container header nav ul li a {
   text-transform: capitalize;
-  color: var(--black);
+  color: var(--white);
   font-weight: bold;
   font-size: 22px;
+}
+body .container .banner {
+  width: auto;
+  position: relative;
+}
+body .container .banner img {
+  min-width: 100%;
+  height: 500px;
+  object-fit: cover;
+  object-position: center;
+}
+body .container .banner button.cta {
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  translate: -50%;
+  background: var(--dalmond);
+  border: none;
+  padding: 20px 30px;
+  font-size: 22px;
+  border-radius: 30px;
+  color: var(--brown);
+  cursor: pointer;
+}
+body .container .banner button.cta:hover {
+  background: var(--brown);
+  color: var(--dalmond);
+}
+body .container .banner button.cta:active {
+  background: var(--dalmond);
+  color: var(--brown);
 }
 
 /*# sourceMappingURL=style.css.map */

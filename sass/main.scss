@@ -11,10 +11,11 @@
     --white: #fff;
     --black:#000;
     --brown: #776F64;
+    --dalmond: #ffebcd;
 }
 
 body{
-    background-color: blanchedalmond;
+    background-color: var(--dalmond);
     min-width: 100svh;
     .container{
         max-width: 1440px;
@@ -25,6 +26,8 @@ body{
             justify-content: space-between;
             align-items: center;
             padding: 30px;
+            background: #776F64;
+            color: #fff;
             .logo{
                 img{
                     display: none;
@@ -40,11 +43,42 @@ body{
                     li{
                         a{
                             text-transform: capitalize;
-                            color: var(--black);
+                            color: var(--white);
                             font-weight: bold;
                             font-size: 22px;
                         }
                     }
+                }
+            }
+        }
+        .banner{
+            width: auto;
+            position: relative;
+            img{
+                min-width: 100%;
+                height: 500px;
+                object-fit: cover;
+                object-position: center;
+            }
+            button.cta{
+                position: absolute;
+                bottom: 5%;
+                left: 50%;
+                translate: -50%;
+                background: var(--dalmond);
+                border: none;
+                padding: 20px 30px;
+                font-size: 22px;
+                border-radius: 30px;
+                color: var(--brown);cursor: pointer;
+                &:hover{
+                    background: var(--brown);
+                    color: var(--dalmond);
+                    }
+                    &:active{
+                    background: var(--dalmond);
+                    color: var(--brown);
+
                 }
             }
         }
