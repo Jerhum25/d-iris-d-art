@@ -86,13 +86,59 @@ body {
         }
       }
     }
-    .aboutUs{
+    .aboutUs {
+      display: flex;
+      flex-direction: column;
+      padding: 50px;
+      h2 {
+        text-transform: capitalize;
+      }
+    }
+    .prices {
+      padding: 50px;
+      background-color: var(--brown);
+      h2 {
+        color: var(--white);
+        text-transform: capitalize;
+      }
+      .cards {
         display: flex;
-        flex-direction: column;
-        padding: 50px;
-        h2{
-            text-transform: capitalize;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
+        .card {
+          width: 200px;
+          height: 300px;
+          display: flex;
+          align-items: center;
+          // justify-content: space-between;
+          flex-direction: column;
+          background-color: var(--dalmond);
+          color: var(--brown);
+          padding: 15px;
+          border-radius: 10px;
+          box-shadow: 0 0 10px var(--dalmond);
+          h3,
+          .price {
+            height: 20%;
+          }
+          ul {
+            height: 80%;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            li {
+              font-size: 14px;
+            }
+          }
+          .price{
+            font-size: 20px;
+            font-weight: bold;
+          }
         }
+      }
     }
   }
 }

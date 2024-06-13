@@ -90,5 +90,50 @@ body .container .aboutUs {
 body .container .aboutUs h2 {
   text-transform: capitalize;
 }
+body .container .prices {
+  padding: 50px;
+  background-color: var(--brown);
+}
+body .container .prices h2 {
+  color: var(--white);
+  text-transform: capitalize;
+}
+body .container .prices .cards {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+body .container .prices .cards .card {
+  width: 200px;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: var(--dalmond);
+  color: var(--brown);
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px var(--dalmond);
+}
+body .container .prices .cards .card h3,
+body .container .prices .cards .card .price {
+  height: 20%;
+}
+body .container .prices .cards .card ul {
+  height: 80%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+body .container .prices .cards .card ul li {
+  font-size: 14px;
+}
+body .container .prices .cards .card .price {
+  font-size: 20px;
+  font-weight: bold;
+}
 
 /*# sourceMappingURL=style.css.map */
