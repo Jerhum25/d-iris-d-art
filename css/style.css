@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Satisfy&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -38,6 +39,7 @@ body .container header .logo img {
 }
 body .container header .logo h1 {
   font-size: 45px;
+  font-family: "Satisfy", serif;
 }
 body .container header .burger {
   width: 30px;
@@ -115,10 +117,6 @@ body .container .banner button.cta {
   border-radius: 30px;
   text-wrap: nowrap;
   cursor: pointer;
-}
-body .container .banner button.cta:hover {
-  background: var(--brown);
-  color: var(--dalmond);
 }
 body .container .banner button.cta:active {
   background: var(--dalmond);
@@ -218,6 +216,7 @@ body .container .contacts form h2 {
 }
 body .container .contacts form input,
 body .container .contacts form textarea {
+  font-size: 16px;
   border: 1px solid var(--dalmond);
   outline: none;
   border-radius: 5px;
@@ -290,7 +289,8 @@ body .container footer {
 
 @media screen and (max-width: 768px) {
   body .container {
-    margin: auto;
+    margin: 0;
+    width: 100%;
   }
   body .container header {
     padding: 15px;
@@ -303,11 +303,11 @@ body .container footer {
     z-index: 10;
   }
   body .container header nav {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100svw;
-    height: 100svh;
+    height: 110vh;
     background-color: var(--brown);
     z-index: 5;
     display: none;
@@ -342,6 +342,12 @@ body .container footer {
   }
   body .container .contacts form {
     padding: 0;
+    width: 100%;
+  }
+  body .container .contacts form .names {
+    flex-direction: column;
+  }
+  body .container .contacts form .names div {
     width: 100%;
   }
   body .container .contacts form button {

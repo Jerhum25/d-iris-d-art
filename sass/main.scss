@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+
+
 * {
   padding: 0;
   margin: 0;
@@ -36,6 +39,7 @@ body {
         }
         h1 {
           font-size: 45px;
+          font-family: "Satisfy", serif;
         }
       }
       .burger {
@@ -118,10 +122,10 @@ body {
         border-radius: 30px;
         text-wrap: nowrap;
         cursor: pointer;
-        &:hover {
-          background: var(--brown);
-          color: var(--dalmond);
-        }
+        // &:hover {
+        //   background: var(--brown);
+        //   color: var(--dalmond);
+        // }
         &:active {
           background: var(--dalmond);
           color: var(--brown);
@@ -220,6 +224,7 @@ body {
         }
         input,
         textarea {
+          font-size: 16px;
           border: 1px solid var(--dalmond);
           outline: none;
           border-radius: 5px;
@@ -302,7 +307,8 @@ body {
 @media screen and (max-width: 768px) {
   body {
     .container {
-      margin: auto;
+      margin: 0;
+      width: 100%;
       header {
         padding: 15px;
         .logo {
@@ -315,12 +321,11 @@ body {
           z-index: 10;
         }
         nav {
-          // display: none;
-          position: absolute;
+          position: fixed;
           top: 0;
           left: 0;
           width: 100svw;
-          height: 100svh;
+          height: 110vh;
           background-color: var(--brown);
           z-index: 5;
           display: none;
@@ -363,6 +368,12 @@ body {
         form {
           padding: 0;
           width: 100%;
+          .names{
+            flex-direction: column;
+            div{
+              width: 100%;
+            }
+          }
           button {
             width: fit-content;
             align-self: center;
