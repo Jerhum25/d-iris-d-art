@@ -9,7 +9,40 @@
 
 :root {
   --white: #fff;
+  --black:#000;
   --brown: #776F64;
+}
+
+body {
+  background-color: blanchedalmond;
+  min-width: 100svh;
+}
+body .container {
+  max-width: 1440px;
+  margin: 50px auto;
+  background: #fff;
+}
+body .container header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px;
+}
+body .container header .logo img {
+  display: none;
+}
+body .container header .logo h1 {
+  font-size: 45px;
+}
+body .container header nav ul {
+  display: flex;
+  gap: 30px;
+}
+body .container header nav ul li a {
+  text-transform: capitalize;
+  color: var(--black);
+  font-weight: bold;
+  font-size: 22px;
 }
 
 /*# sourceMappingURL=style.css.map */
