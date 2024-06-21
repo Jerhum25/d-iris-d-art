@@ -7,5 +7,8 @@
     "sass": "sass --watch ./sass/main.scss:./css/style.css"
   },
   "author": "JHDev",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "@emailjs/browser": "^4.3.3"
+  }
 }

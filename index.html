@@ -8,6 +8,18 @@
       src="https://kit.fontawesome.com/279d0d4073.js"
       crossorigin="anonymous"
     ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init({
+          publicKey: "JxInSwwuHGmV2k9qx",
+        });
+      })();
+    </script>
+
     <title>D'iris & d'art</title>
   </head>
   <body>
@@ -115,24 +127,24 @@
         </div>
       </section>
 
-      <section class="contacts" id="contact">
-        <form>
+      <section class="contacts" id="contacts">
+        <form id="contact-form">
           <h2>contactez nous</h2>
           <div class="names">
             <div class="firstName">
               <label for="firstName">Prénom <span>*</span></label
-              ><input type="text" name="first name" id="firstName" />
+              ><input type="text" name="firstName" id="firstName" />
               <p class="firstNameError error">Ce champ est requis</p>
             </div>
             <div class="lastName">
               <label for="lastName">Nom <span>*</span></label
-              ><input type="text" name="last name" id="lastName" />
+              ><input type="text" name="lastName" id="lastName" />
               <p class="lastNameError error">Ce champ est requis</p>
             </div>
           </div>
           <div class="email">
             <label for="email">Adresse email <span>*</span></label
-            ><input type="email" name="email" id="email" />
+            ><input type="text" name="email" id="email" />
             <p class="emailError error">Ce champ est requis</p>
           </div>
           <div class="message">
@@ -140,9 +152,9 @@
             ><textarea name="message" id="message"></textarea>
             <p class="messageError error">Ce champ est requis</p>
           </div>
-          <button type="submit" class="submitBtn">envoyer</button>
+          <button class="submitBtn">envoyer</button>
+          <p id="status-message"></p>
         </form>
-
         <div class="links">
           <div class="adresse">
             <h2>nous trouver</h2>

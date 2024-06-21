@@ -1,3 +1,5 @@
+//gestion du menu en mode mobile
+
 const burger = document.querySelector(".burger");
 const menuItem = document.querySelectorAll(".menuItem");
 const menu = document.querySelector(".menu");
@@ -13,6 +15,8 @@ menuItem.forEach((item) => {
     burger.classList.toggle("open");
   };
 });
+
+// gestion de la validation du formulaire
 
 const firstNameInput = document.querySelector("#firstName");
 const firstNameError = document.querySelector(".firstNameError");
@@ -55,8 +59,9 @@ messageInput.addEventListener("input", () => {
 });
 
 const submitBtn = document.querySelector(".submitBtn");
+const contactForm = document.querySelector("form");
 
-function submit(e) {
+async function submit(e) {
   e.preventDefault();
   if (firstNameInput.value === "") {
     firstNameError.classList.add("active");
@@ -74,7 +79,6 @@ function submit(e) {
   if (emailInput.value === "") {
     emailError.classList.add("active");
   } else if (emailRegex.test(emailInput.value) == false) {
-    console.log("email invalide");
     emailError.classList.add("active");
     emailError.textContent = "Ceci n'est pas une adresse mail valide.";
   } else {
@@ -87,7 +91,7 @@ function submit(e) {
     messageError.classList.remove("active");
   }
 
-  const form = document.querySelector("form");
+  // envoi du formulaire via emailjs
   if (
     firstNameInput.value != "" &&
     lastNameInput.value != "" &&
@@ -95,8 +99,28 @@ function submit(e) {
     emailRegex.test(emailInput.value) &&
     messageInput.value != ""
   ) {
-    alert("Votre message a bien été envoyé");
-    form.reset();
+    emailjs
+      .sendForm("dirisdart", "template_783cvmj", contactForm, {
+        machin: firstNameInput.value,
+        truc: lastNameInput.value,
+        bidule: emailInput.value,
+        chose: messageInput.value,
+      })
+      .then(
+        function () {
+          document.getElementById("status-message").innerText =
+            "Votre message a été envoyé avec succès.";
+          contactForm.reset();
+          setTimeout(() => {
+            document.getElementById("status-message").innerText = "";
+          }, 5000);
+        },
+        function (error) {
+          document.getElementById("status-message").innerText =
+            "Une erreur est survenue lors de l'envoi de votre message. Veuillez réessayer plus tard.";
+          console.log("FAILED...", error);
+        }
+      );
   }
 }
-submitBtn.addEventListener("click", submit);
+contactForm.addEventListener("click", submit);
