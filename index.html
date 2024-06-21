@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,11 +8,8 @@
       src="https://kit.fontawesome.com/279d0d4073.js"
       crossorigin="anonymous"
     ></script>
-    <script
-      type="text/javascript"
-      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
-    ></script>
-    <script type="text/javascript">
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script>
       (function () {
         emailjs.init({
           publicKey: "JxInSwwuHGmV2k9qx",
@@ -35,14 +32,15 @@
             <li class="menuItem"><a href="#">accueil</a></li>
             <li class="menuItem"><a href="#aboutUs">à propos</a></li>
             <li class="menuItem"><a href="#prices">tarifs</a></li>
-            <li class="menuItem"><a href="#contact">contact</a></li>
+            <li class="menuItem"><a href="#contacts">contact</a></li>
           </ul>
         </nav>
       </header>
 
       <section class="banner">
+        <h2>banner</h2>
         <img src="./assets/images/iris.jpeg" alt="banner image" />
-        <button class="cta"><a href="#prices">Nos offres du moment</a></button>
+        <a class="cta" href="#currentOffers">Nos offres du moment</a>
       </section>
       <section class="aboutUs" id="aboutUs">
         <h2>à propos de nous</h2>
@@ -80,6 +78,54 @@
           votre iris une œuvre d’art : Vous seriez surpris de la vraie couleur
           de vos yeux…!
         </p>
+      </section>
+
+      <section class="currentOffers" id="currentOffers">
+        <h2>nos offres du moment</h2>
+        <div class="offers">
+          <div class="offer">
+            <h3>🎅 Pack Noël 🤶</h3>
+            <p>15% de remise sur les prestations iris</p>
+            <p>du 15 novembre au 15 décembre</p>
+            <p>Livraison garantie avant Noël</p>
+          </div>
+          <div class="offer">
+            <h3>🎅 Pack Noël 🤶</h3>
+            <p>15% de remise sur les prestations iris</p>
+            <p>du 15 novembre au 15 décembre</p>
+            <p>Livraison garantie avant Noël</p>
+          </div>
+          <div class="offer">
+            <h3>🎅 Pack Noël 🤶</h3>
+            <p>15% de remise sur les prestations iris</p>
+            <p>du 15 novembre au 15 décembre</p>
+            <p>Livraison garantie avant Noël</p>
+          </div>
+          <div class="offer">
+            <h3>🎅 Pack Noël 🤶</h3>
+            <p>15% de remise sur les prestations iris</p>
+            <p>du 15 novembre au 15 décembre</p>
+            <p>Livraison garantie avant Noël</p>
+          </div>
+          <div class="offer">
+            <h3>🎅 Pack Noël 🤶</h3>
+            <p>15% de remise sur les prestations iris</p>
+            <p>du 15 novembre au 15 décembre</p>
+            <p>Livraison garantie avant Noël</p>
+          </div>
+          <div class="offer">
+            <h3>🎅 Pack Noël 🤶</h3>
+            <p>15% de remise sur les prestations iris</p>
+            <p>du 15 novembre au 15 décembre</p>
+            <p>Livraison garantie avant Noël</p>
+          </div>
+          <div class="offer">
+            <h3>🎅 Pack Noël 🤶</h3>
+            <p>15% de remise sur les prestations iris</p>
+            <p>du 15 novembre au 15 décembre</p>
+            <p>Livraison garantie avant Noël</p>
+          </div>
+        </div>
       </section>
 
       <section class="prices" id="prices">
@@ -247,6 +293,16 @@
       <footer>
         &copy;2024 JH Dev - Tous droits réservés - Photos non libres de droits
       </footer>
+      <div class="cookie-banner" id="cookie-banner">
+        <img src="./assets/images/cookie.png" alt="cookie" />
+        <p>
+          Nous utilisons des cookies pour améliorer votre expérience sur notre
+          site.<br />
+          En continuant à naviguer sur ce site, vous acceptez notre utilisation
+          des cookies.
+        </p>
+        <button id="accept-cookies">Accepter</button>
+      </div>
     </div>
 
     <script src="./script.js"></script>

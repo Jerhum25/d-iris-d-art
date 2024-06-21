@@ -124,3 +124,42 @@ async function submit(e) {
   }
 }
 contactForm.addEventListener("click", submit);
+
+
+// gestion des cookies
+document.addEventListener('DOMContentLoaded', function () {
+  const cookieBanner = document.getElementById('cookie-banner');
+  const acceptCookiesButton = document.getElementById('accept-cookies');
+
+  // Fonction pour vérifier si le cookie de consentement est déjà défini
+  function checkCookieConsent() {
+      const consent = getCookie('cookie_consent');
+      if (!consent) {
+          cookieBanner.style.display = 'flex';
+      }
+  }
+
+  // Fonction pour obtenir la valeur d'un cookie par son nom
+  function getCookie(name) {
+      const value = `; ${document.cookie}`;
+      const parts = value.split(`; ${name}=`);
+      if (parts.length === 2) return parts.pop().split(';').shift();
+  }
+
+  // Fonction pour définir un cookie
+  function setCookie(name, value, days) {
+      const d = new Date();
+      d.setTime(d.getTime() + (days * 24 * 60 * 60 * 1000));
+      const expires = `expires=${d.toUTCString()}`;
+      document.cookie = `${name}=${value}; ${expires}; path=/`;
+  }
+
+  // Gestionnaire d'événement pour le bouton "Accepter"
+  acceptCookiesButton.addEventListener('click', function () {
+      setCookie('cookie_consent_iris_art', 'true', 365);
+      cookieBanner.style.display = 'none';
+  });
+
+  // Vérification initiale du consentement aux cookies
+  checkCookieConsent();
+});
